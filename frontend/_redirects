@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/api/*"
+  to = "cini-bot.srk8115939.workers.dev/api/:splat"
+  status = 200
+  force = true
+
+# Replace <your-subdomain> with your actual Cloudflare workers subdomain.
+# Find it at: dash.cloudflare.com → Workers & Pages → your worker URL
+# Example: https://cineai-worker.myname.workers.dev

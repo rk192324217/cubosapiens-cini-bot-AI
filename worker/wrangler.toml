@@ -1,0 +1,17 @@
+name = "cineai-worker"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+
+# The secret GEMINI_API_KEY is stored in Cloudflare's environment — never in code.
+# Set it with: wrangler secret put GEMINI_API_KEY
+# It will be available as env.GEMINI_API_KEY in your worker.
+
+[vars]
+# Non-secret vars can go here.
+# ALLOWED_ORIGIN is set per environment below.
+
+[env.production]
+name = "cineai-worker"
+
+# Set your deployed Cloudflare Pages URL here after first deploy
+# wrangler secret put ALLOWED_ORIGIN --env production

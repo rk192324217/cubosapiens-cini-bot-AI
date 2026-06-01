@@ -1,0 +1,91 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-void: #080810;
+  --bg-deep: #0e0e1a;
+  --bg-card: #13131f;
+  --bg-surface: #1a1a2a;
+  --bg-hover: #222235;
+  --accent: #e8a045;
+  --accent-dim: #c4862e;
+  --accent-glow: rgba(232, 160, 69, 0.15);
+  --text-primary: #f0efe8;
+  --text-secondary: #9998a8;
+  --text-muted: #55546a;
+  --border: rgba(255,255,255,0.06);
+  --border-accent: rgba(232, 160, 69, 0.3);
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --radius: 10px;
+  --radius-lg: 16px;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea {
+  font-family: var(--font-body);
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-hover);
+  border-radius: 4px;
+}
+
+/* Markdown styles inside chat bubbles */
+.prose p { margin-bottom: 0.6em; line-height: 1.65; }
+.prose p:last-child { margin-bottom: 0; }
+.prose ul, .prose ol { padding-left: 1.4em; margin: 0.4em 0; }
+.prose li { margin-bottom: 0.25em; line-height: 1.6; }
+.prose strong { color: var(--accent); font-weight: 500; }
+.prose em { color: var(--text-secondary); }
+.prose code {
+  background: var(--bg-hover);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+.prose h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin: 0.8em 0 0.4em;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
